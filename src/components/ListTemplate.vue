@@ -3,10 +3,11 @@
         <li
             v-for="item in list"
             :key="item"
+            class="list-item"
         >
-            {{item.name}}
+            {{item}}
         </li>
-        <input />
+        <input v-model="input" @change="updateValue" />
   </ul>
 </template>
 
@@ -15,3 +16,5 @@ export default {
   name: 'ListTemplate',
 };
 </script>
+
+<style lang="scss" src='./ListTemplate.scss' />

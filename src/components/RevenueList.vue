@@ -7,9 +7,17 @@ export default {
   extends: ListTemplate,
   setup() {
     const list = ref([]);
+    const input = ref(null);
+
+    function updateValue(evt) {
+      input.value = null;
+      list.value.push(evt.target.value);
+    }
 
     return {
       list,
+      input,
+      updateValue,
     };
   },
 };
