@@ -1,15 +1,22 @@
 <script>
-import { ref } from 'vue';
 import ListTemplate from './ListTemplate.vue';
+import listHandling from '../composables/listHandling';
+
+const listTitle = 'Ausgaben';
 
 export default {
-  name: 'RevenueList',
+  name: 'ExpenditureList',
   extends: ListTemplate,
-  setup() {
-    const list = ref([]);
-
+  props: {
+    modelValue: {
+      type: Array,
+      required: true,
+    },
+  },
+  setup(props, { emit }) {
     return {
-      list,
+      ...listHandling(props, emit, 'modelValue'),
+      listTitle,
     };
   },
 };

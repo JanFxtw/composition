@@ -1,14 +1,18 @@
 <template>
-  <ul class="list">
+    <ul class="list">
+        <input
+            v-model="input"
+            :placeholder="listTitle"
+            @change="updateValue"
+        />
         <li
-            v-for="item in list"
+            v-for="item in modelValue"
             :key="item"
             class="list-item"
         >
             {{item}}
         </li>
-        <input v-model="input" @change="updateValue" />
-  </ul>
+    </ul>
 </template>
 
 <script>

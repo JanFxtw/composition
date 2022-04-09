@@ -2,4 +2,10 @@
     flex: auto;
     text-align: center;
     padding: 0;
+
+    > .list-item {
+        display: block;
+        padding: 5px;
+        background: rgb(238, 238, 238);
+    }
 }
