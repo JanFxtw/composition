@@ -6,12 +6,12 @@ export default function (props, emit) {
   const input = ref(null);
 
   const updateValue = (evt) => {
-    const list = [...props.modelValue];
     const { value } = evt.target;
     input.value = null;
 
     if (!isNumeric.test(value)) { return; }
 
+    const list = [...props.modelValue];
     list.push(evt.target.value);
     emit('update:modelValue', list);
   };

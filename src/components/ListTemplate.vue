@@ -10,14 +10,21 @@
             :key="item"
             class="list-item"
         >
-            {{item}}
+            {{parseCurrency(item)}}
         </li>
     </ul>
 </template>
 
 <script>
+import parseCurrency from '@/helpers/parseCurrency';
+
 export default {
   name: 'ListTemplate',
+  setup() {
+    return {
+      parseCurrency,
+    };
+  },
 };
 </script>
 

@@ -16,6 +16,7 @@ export default {
   setup(props, { emit }) {
     return {
       ...listHandling(props, emit, 'modelValue'),
+      ...ListTemplate.setup(),
       listTitle,
     };
   },

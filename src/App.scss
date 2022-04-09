@@ -1,3 +1,19 @@
+@import '~normalize.css';
+
+.balance {
+    position: relative;
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(2, 158, 2);
+
+    &.negative {
+        color: rgb(158, 33, 2);
+    }
+}
+
 .dashboard {
     display: flex;
     justify-content: center;
