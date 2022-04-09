@@ -3,6 +3,7 @@
         <input
             v-model="input"
             :placeholder="listTitle"
+            class="input"
             @change="updateValue"
         />
         <li
